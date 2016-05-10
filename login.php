@@ -38,7 +38,8 @@ if (isset($_POST["submitButton"])) {
         }
                 
     } else {
-        die ("<h2>Invalid login credentials</h2>");
+        $_SESSION['errmsg'] = "<h2>Invalid login credentials</h2>";
+        header("Location: index.php");
     }
 
 }
